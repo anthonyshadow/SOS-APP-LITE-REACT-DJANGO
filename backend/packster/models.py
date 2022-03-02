@@ -5,9 +5,9 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField(max_length=30)
-    password = models.CharField(max_length=25)
-    email = models.CharField(max_length=20)
-    age = models.CharField(max_length=3)
+    email = models.CharField(max_length=40)
+    age = models.IntegerField()
 
     def __str__(self): 
-        return self.name, self.email, self.age
+        return self.name
+
